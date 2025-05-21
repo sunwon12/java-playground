@@ -125,19 +125,6 @@ public class FixtureMonkeyConfig {
                                                     setIdNull(fieldValue);
                                                 }
                                             }
-
-                                            if (entity instanceof Product) {
-                                                Field isDeletedField = entity.getClass().getDeclaredField("soldout");
-                                                isDeletedField.setAccessible(true);
-                                                isDeletedField.set(entity, false);
-                                            }
-
-                                            if (entity instanceof Board) {
-                                                Field isDeletedField = entity.getClass().getDeclaredField("isDeleted");
-                                                isDeletedField.setAccessible(true);
-                                                isDeletedField.set(entity, false);
-                                            }
-
                                         }
                                         return true;
                                     } catch (Exception e) {
