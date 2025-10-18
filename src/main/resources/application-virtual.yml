@@ -1,0 +1,4 @@
+spring:
+  threads:
+    virtual:
+      enabled: true  # 가상 스레드 활성화
